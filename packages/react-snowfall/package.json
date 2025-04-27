@@ -33,7 +33,7 @@
     "url": "https://github.com/cahilfoley/react-snowfall/issues"
   },
   "peerDependencies": {
-    "react": "^16.8 || 17.x || 18.x",
+    "react": "^16.8 || 17.x || 18.x || 19.x",
     "react-dom": "^16.8 || 17.x || 18.x"
   },
   "devDependencies": {

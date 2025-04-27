@@ -1,20 +1,16 @@
-import Snowfall from 'react-snowfall/src'
-import GithubLink from './components/GithubLink/GithubLink'
-import Settings from './components/Settings'
-import { useSettingsStore } from './settings'
-import logo from './logo.png'
-import './App.css'
+import Snowfall from "react-snowfall/src";
+import { useSettingsStore } from "./settings";
+import logo from "./logo.png";
+import "./App.css";
 
-const githubURL = import.meta.env.VITE_GITHUB_URL
-const packageName = import.meta.env.VITE_PACKAGE_NAME
+const snowflake = document.createElement("img");
+snowflake.src = logo;
 
-const snowflake = document.createElement('img')
-snowflake.src = logo
-
-const images = [snowflake]
+const images = [snowflake];
 
 const App = () => {
-  const { color, snowflakeCount, radius, speed, wind, useImages, opacity } = useSettingsStore()
+  const { color, snowflakeCount, radius, speed, wind, useImages, opacity } =
+    useSettingsStore();
 
   return (
     <div className="app">
@@ -27,14 +23,8 @@ const App = () => {
         images={useImages ? images : undefined}
         opacity={opacity}
       />
-      <a className="title" href={githubURL} style={{ color }}>
-        <img src={logo} alt="Snowflake Logo" />
-        <h1>{packageName}</h1>
-      </a>
-      <Settings />
-      <GithubLink url={githubURL} />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

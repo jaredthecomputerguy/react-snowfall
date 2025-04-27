@@ -1,5 +1,5 @@
 import { SnowfallProps } from 'react-snowfall'
-import create from 'zustand'
+import { create } from 'zustand'
 
 export interface SnowfallSettings extends SnowfallProps {
   update: (settings: Partial<SnowfallProps>) => void
@@ -23,5 +23,5 @@ export const useSettingsStore = create<SnowfallSettings>((set) => ({
     } else {
       return set({ useImages, radius: [0.5, 3] })
     }
-  },
+  }
 }))
